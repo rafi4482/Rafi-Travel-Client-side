@@ -1,0 +1,14 @@
+.text-align{
+    text-align: center;
+    margin: 100px;
+    padding: 100px;
+    background-color: rgb(10, 10, 1);
+    border-radius: 10px;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text-align h1{
+    color: rgb(17, 164, 218);
+}
+.text-align p{
+    color: rgb(234, 236, 236);
+}

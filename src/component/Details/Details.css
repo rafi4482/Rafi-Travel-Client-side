@@ -1,0 +1,15 @@
+.header-align{
+    margin: 50px;
+    text-align: center;
+}
+ .cards-align{
+    text-align: center;
+    margin-bottom: 50px;
+} 
+.carding img{
+    height: 300px;
+   align-items: center;
+}
+.card-details{
+   text-align: center;
+}
