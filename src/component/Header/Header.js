@@ -28,11 +28,11 @@ const Header = () => {
 
       
 
-{user.email &&  <span className='style' style={{color:'white'}}>{user.displayName}</span>
+{user.email &&  <span className='style' style={{margin:"5px",borderRadius:'5px',backgroundColor:'blue',color:'white'}}>{user.displayName}</span>
 }      {       
         user.email?
        
-        <button style={{margin:"5px",borderRadius:'5px',backgroundColor:'blue',color:'white'}} onClick={logOut}>Logout</button>:
+        <button style={{margin:"5px",borderRadius:'5px',backgroundColor:'red',color:'white'}} onClick={logOut}>Logout</button>:
         <Nav.Link href="/login">Login</Nav.Link>}
        
     </Nav>

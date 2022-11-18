@@ -35,6 +35,7 @@ const Details = () => {
         })
             .then((res) => res.json())
             .then((result) => console.log(result))
+            alert('Booking successful!')
         // console.log(data);
     }
 
@@ -68,15 +69,17 @@ const Details = () => {
                 </div>
                 <div className="col-md-5">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input className="p-2 m-2" {...register("name", { required: true })} defaultValue={detail?.name} />
+        
+
+                         <input className="p-2 m-2" {...register("name", { required: true })} defaultValue={detail?.name} />
                         <input className="p-2 m-2" {...register("desc", { required: true })} defaultValue={detail?.desc} />
                         <input className="p-2 m-2" {...register("price", { required: true })} defaultValue={detail?.price} type="number" />
-                        <input className="p-2 m-2" {...register("img", { required: true })} defaultValue={detail?.img} />
+                        <input className="p-2 m-2" {...register("img", { required: true })} defaultValue={detail?.img} /> 
 
 
-                        {errors.exampleRequired && <span>This field is required</span>}
-
-                        <input type="submit" />
+                       {errors.exampleRequired && <span>This field is required</span>} 
+<h2>Please click this button below to confirm your booking</h2>
+<button className="btn btn-success">Confirm Booking</button>
                     </form>
 
                 </div>
