@@ -10,7 +10,7 @@ const Carding = () => {
 
 
     useEffect(() => {
-        fetch('https://ghastly-warlock-50283.herokuapp.com/services')
+        fetch('https://rafi-travel-server-side.onrender.com/services')
             .then(res => res.json())
             .then(data => setCard(data))
        .catch(error => console.log(error))

@@ -9,14 +9,14 @@ const MyOrder = () => {
     console.log(user)
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch(`https://ghastly-warlock-50283.herokuapp.com/myOrder/${user?.email}`)
+        fetch(`https://rafi-travel-server-side.onrender.com/myOrder/${user?.email}`)
             .then(res => res.json())
             .then((data) => setServices(data))
     }, [user])
 
 
     const handleDelete = (id) => {
-        fetch(`https://ghastly-warlock-50283.herokuapp.com/deleteOrder/${id}`, {
+        fetch(`https://rafi-travel-server-side.onrender.com/deleteOrder/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

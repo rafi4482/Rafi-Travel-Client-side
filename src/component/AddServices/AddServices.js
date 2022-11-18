@@ -6,7 +6,7 @@ import useFirebase from '../../hooks/useFirebase';
 const AddServices = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        fetch('https://ghastly-warlock-50283.herokuapp.com/addServices', {
+        fetch('https://rafi-travel-server-side.onrender.com/addServices', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)

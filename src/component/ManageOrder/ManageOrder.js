@@ -8,7 +8,7 @@ const ManageOrder = () => {
     const { register, handleSubmit } = useForm();
     const [orderId, setOrderId] = useState("");
     useEffect(() => {
-        fetch('https://ghastly-warlock-50283.herokuapp.com/allOrder')
+        fetch('https://rafi-travel-server-side.onrender.com/allOrder')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -18,7 +18,7 @@ const ManageOrder = () => {
 
     const onSubmit = (data) => {
         console.log(data, orderId);
-        fetch(`https://ghastly-warlock-50283.herokuapp.com/statusUpdate/${orderId}`, {
+        fetch(`https://rafi-travel-server-side.onrender.com/statusUpdate/${orderId}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -27,7 +27,7 @@ const ManageOrder = () => {
             .then((result) => console.log(result));
     };
     const handleDelete=(id)=>{
-        fetch(`https://ghastly-warlock-50283.herokuapp.com/deleteOrder/${id}`,{
+        fetch(`https://rafi-travel-server-side.onrender.com/deleteOrder/${id}`,{
                method:"DELETE",
         })
         .then((res) => res.json())

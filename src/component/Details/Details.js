@@ -14,7 +14,7 @@ const Details = () => {
     const [detail, setDetail] = useState([])
     const { user } = useAuth()
     useEffect(() => {
-        fetch(`https://ghastly-warlock-50283.herokuapp.com/services/${id}`)
+        fetch(`https://rafi-travel-server-side.onrender.com/services/${id}`)
             .then(res => res.json())
             .then(data => {
                 setDetail(data)
@@ -27,7 +27,7 @@ const Details = () => {
     const onSubmit = (data) => {
         data.email = user.email
         console.log(data);
-        fetch('https://ghastly-warlock-50283.herokuapp.com/confirmOrder', {
+        fetch('https://rafi-travel-server-side.onrender.com/confirmOrder', {
 
             method: "POST",
             headers: { "content-type": "application/json" },
